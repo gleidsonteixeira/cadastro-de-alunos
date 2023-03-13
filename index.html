@@ -13,7 +13,13 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="d-flex justify-content-between">
-                    Lista de alunos <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Novo aluno</button>
+                    Lista de alunos 
+                    <button 
+                    class="btn btn-primary" 
+                    type="button" 
+                    data-bs-toggle="offcanvas" 
+                    data-bs-target="#offcanvasRight" 
+                    aria-controls="offcanvasRight">Novo aluno</button>
                 </h2>
                 <table class="table">
                     <thead>
@@ -34,10 +40,10 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasRightLabel">Cadastrar</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <button id="cadastro-fechar" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <form onsubmit="adicionarAluno()">
+          <form id="cadastro" onsubmit="adicionarAluno()">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required />
             <label for="email" class="form-label mt-2">Email</label>
@@ -46,6 +52,26 @@
             <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone" required />
             <label for="cidade" class="form-label mt-2">Cidade</label>
             <input type="text" class="form-control" id="cidade" placeholder="Digite o cidade" required />
+            <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRightEditar" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Editar</h5>
+          <button id="editar-fechar" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="editar" onsubmit="editarAluno()">
+            <label for="e_nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="e_nome" placeholder="Digite o nome" required />
+            <label for="e_email" class="form-label mt-2">Email</label>
+            <input type="email" class="form-control" id="e_email" placeholder="Digite o email" required />
+            <label for="e_telefone" class="form-label mt-2">Telefone</label>
+            <input type="tel" class="form-control" id="e_telefone" placeholder="Digite o telefone" required />
+            <label for="e_cidade" class="form-label mt-2">Cidade</label>
+            <input type="text" class="form-control" id="e_cidade" placeholder="Digite o cidade" required />
             <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
           </form>
         </div>
